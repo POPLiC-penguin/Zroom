@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zroom - 您的 macOS 選單列專注陪伴小夥伴</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Zroom 是一款 macOS 選單列與完整視窗雙型態的專注陪伴 App。在精美的像素房間中設定番茄鐘、與可愛像素小夥伴共同建立高效工作與健康休息節奏。">
+  <meta name="keywords" content="Zroom, zroomfocus, macOS, 專注App, 番茄鐘, 像素風, 寵物養成, 生產力工具, 選單列, App Store, 白名單">
+  <meta name="author" content="Wen Hsuan Chen">
+  <meta name="theme-color" content="#F6A13A">
+  <link rel="canonical" href="https://zroomfocus.com/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zroomfocus.com/">
+  <meta property="og:title" content="Zroom - 您的 macOS 選單列專注陪伴小夥伴">
+  <meta property="og:description" content="番茄鐘工作法與像素房間佈置的完美結合！解鎖具備獨特技能的寵物，陪伴您每日的高效工作。">
+  <meta property="og:image" content="https://zroomfocus.com/assets/screenshots/lobby_full.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zroom - 您的 macOS 選單列專注陪伴小夥伴">
+  <meta name="twitter:description" content="在桌面上建構專注樓層、配置家具，與像素夥伴共同培養高效的專注與休息節奏。">
+  <meta name="twitter:image" content="https://zroomfocus.com/assets/screenshots/lobby_full.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=20260612-zroom-tagline">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+</head>
+<body class="elevator-layout">
+
+  <!-- Header Section (Floating) -->
+  <header>
+    <button class="logo-container home-logo-btn" id="homeLogoBtn" type="button" aria-label="回到首頁">
+      <img src="assets/avatars/orange_tabby.png" alt="" class="header-cat-img" aria-hidden="true">
+      <img src="assets/zroom_logo_header.png" alt="Zroom Logo" class="header-logo-img">
+    </button>
+  </header>
+
+  <!-- Elevator Fixed Sidebar (Styled like the Zroom sidebar) -->
+  <div class="elevator-sidebar" id="elevatorSidebar">
+    <div class="elevator-indicator">
+      <span class="indicator-arrow" id="elevatorArrow">▲</span>
+      <span class="indicator-text" id="elevatorFloorText">1F</span>
+    </div>
+    <div class="elevator-buttons">
+      <button class="elevator-btn active" data-target="floor-1" title="1F 大廳">1F</button>
+      <button class="elevator-btn" data-target="floor-2" title="2F 專注室">2F</button>
+      <button class="elevator-btn" data-target="floor-3" title="3F 夥伴房">3F</button>
+      <button class="elevator-btn" data-target="support-center" title="4F 客服中心">4F</button>
+    </div>
+    <div class="elevator-cable"></div>
+  </div>
+
+  <a href="https://apps.apple.com/app/id6776900515" class="floating-download-cta" id="floatingDownloadCta" aria-label="下載 Zroom" target="_blank" rel="noopener">
+    <span class="floating-download-icon">
+      <img src="assets/app-icon.png" alt="">
+    </span>
+    <span class="floating-download-copy">
+      <span>下載 Zroom</span>
+      <strong>Mac App Store</strong>
+    </span>
+  </a>
+
+  <!-- Building Tower Containers -->
+  <main class="tower-container">
+
+    <!-- 1F Section: Lobby & Download (Hero) -->
+    <section id="floor-1" class="floor-section">
+      <!-- Live Room Floor Background -->
+      <div class="room-floor-canvas" id="lobbyRoom">
+        <div class="room-wallpaper lobby-wall"></div>
+        <div class="room-floor lobby-floor-tiles"></div>
+        <!-- Lobby Decor Items (Styled in CSS) -->
+        <div class="decor-sofa"></div>
+        <div class="decor-plant"></div>
+      </div>
+
+      <!-- Foreground Marketing Content -->
+      <div class="floor-content hero-content">
+        <div class="app-branding">
+          <div class="app-icon-wrapper">
+            <img src="assets/app-icon.png" class="hero-app-icon" alt="Zroom App Icon">
+          </div>
+          <h1 class="app-title">
+            <img src="assets/zroom_logo_full.png" class="hero-logo-img" alt="Zroom">
+          </h1>
+          <p class="app-tagline">築時：動物專注大樓</p>
+          <p class="app-subtitle">您的 macOS 選單列專注陪伴小夥伴</p>
+          <p class="app-intro">在桌面上建構專注樓層、配置家具，與可愛且具備獨特技能的像素夥伴共同培養高效的專注與休息節奏。</p>
+        </div>
+
+        <div class="hero-download-ctas">
+          <a href="https://apps.apple.com/app/id6776900515" class="app-store-badge-premium" id="download" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-.96.04-2.13.64-2.82 1.45-.6.7-1.13 1.84-.99 2.94.1.08.19.12.29.12.9 0 1.93-.61 2.53-1.45z"/>
+            </svg>
+            <div class="badge-text">
+              <span class="sub-text">Download on the</span>
+              <span class="main-text">Mac App Store</span>
+            </div>
+          </a>
+          <button class="btn btn-glass-secondary beta-trigger">加入 Beta 測試</button>
+        </div>
+        
+        <div class="scroll-prompt" onclick="window.zroomScrollToFloor ? window.zroomScrollToFloor('floor-2') : document.getElementById('floor-2').scrollIntoView({behavior:'smooth'})">
+          <span class="scroll-prompt-kicker">Next stop</span>
+          <span class="scroll-prompt-main">搭乘電梯瞧瞧</span>
+          <span class="scroll-arrow">▼</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2F Section: Focus Room (Interactive Simulator & Features) -->
+    <section id="floor-2" class="floor-section">
+      <div class="floor-content focus-floor-content">
+        <!-- Interactive Simulator (Fitted inside the floor) -->
+        <div class="simulator-wrapper-layout">
+          <div class="showcase-window" id="simulatorWindow">
+            <div class="window-header">
+              <div class="header-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="simulator-header-status" id="simulatorHeaderStatus">新手教學房</div>
+            </div>
+            
+            <div class="window-content">
+              <div class="simulator-room resting" id="simulatorRoom">
+                <div class="focus-room-stage">
+                  <div class="focus-room-wall">
+                    <span class="wall-panel-line"></span>
+                  </div>
+                  <div class="focus-room-floor">
+                    <div class="focus-furniture focus-tutorial-desk" aria-hidden="true">
+                      <div class="furniture-shadow"></div>
+                      <span class="desk-leg desk-leg-back-left"></span>
+                      <span class="desk-leg desk-leg-back-right"></span>
+                      <span class="desk-leg desk-leg-front-left"></span>
+                      <span class="desk-leg desk-leg-front-right"></span>
+                      <div class="desk-top">
+                        <div class="desk-bevel"></div>
+                        <div class="desk-book">
+                          <div class="desk-book-pages">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="desk-lamp">
+                          <span class="lamp-base"></span>
+                          <span class="lamp-stem"></span>
+                          <span class="lamp-head"></span>
+                          <span class="lamp-glow"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="focus-furniture focus-tutorial-chair" aria-hidden="true">
+                      <div class="furniture-shadow"></div>
+                      <span class="chair-leg chair-leg-back-left"></span>
+                      <span class="chair-leg chair-leg-back-right"></span>
+                      <span class="chair-leg chair-leg-front-left"></span>
+                      <span class="chair-leg chair-leg-front-right"></span>
+                      <div class="chair-seat">
+                        <div class="chair-backrest"></div>
+                        <span class="chair-spindle spindle-1"></span>
+                        <span class="chair-spindle spindle-2"></span>
+                        <span class="chair-spindle spindle-3"></span>
+                      </div>
+                    </div>
+                    <div class="focus-shadow pet-shadow"></div>
+                    <div class="focus-cat-seat-mask" aria-hidden="true"></div>
+                    <div class="pet-name-badge" id="petNameBadge">經典橘喵</div>
+                    <img src="assets/avatars/orange_tabby.png" class="pet-overlay" id="petOverlay" alt="經典橘喵">
+                  </div>
+                  <div class="focus-room-baseboard"></div>
+                  <div class="focus-wall-shadow"></div>
+                  <div class="focus-grid-dots" aria-hidden="true"></div>
+                </div>
+                <div class="demo-layer mode-demo" aria-hidden="true">
+                  <div class="demo-desktop-screen">
+                    <div class="demo-desktop-menubar">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="demo-full-window">
+                    <div class="demo-window-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="demo-window-room-mini"></div>
+                    <div class="demo-window-sidebar"></div>
+                    <button class="demo-window-collapse" type="button" tabindex="-1" aria-hidden="true">
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="demo-click-dot collapse-click"></div>
+                  <div class="demo-fold-trail"></div>
+                  <div class="demo-menu-bar">
+                    <img src="assets/avatars/orange_tabby.png" alt="">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="demo-click-dot menubar-click"></div>
+                  <div class="demo-menubar-popover">
+                    <div class="popover-room-mini"></div>
+                    <div class="popover-control-line"></div>
+                    <div class="popover-action-row">
+                      <span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="demo-layer whitelist-demo" aria-hidden="true">
+                  <div class="whitelist-panel">
+                    <div class="whitelist-panel-title">白名單</div>
+                    <div class="whitelist-row allowed"><span></span>Xcode</div>
+                    <div class="whitelist-row allowed"><span></span>Notion</div>
+                    <div class="whitelist-row blocked"><span></span>Game</div>
+                  </div>
+                  <div class="distract-app">Game</div>
+                  <img src="assets/avatars/orange_tabby.png" class="whitelist-pet" id="whitelistDemoPet" alt="">
+                  <div class="whitelist-alert">
+                    <strong>Zroom</strong>
+                    <span>回到專注</span>
+                  </div>
+                  <div class="surprise-mark">!</div>
+                </div>
+                <div class="demo-layer reward-demo" aria-hidden="true">
+                  <div class="reward-game-window">
+                    <div class="reward-window-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="reward-room-preview">
+                      <div class="reward-room-wall"></div>
+                      <div class="reward-room-floor"></div>
+                      <img src="assets/avatars/orange_tabby.png" class="reward-pet" id="rewardDemoPet" alt="">
+                      <div class="reward-placed-furniture"></div>
+                    </div>
+                    <div class="reward-inventory">
+                      <div class="reward-inventory-title"></div>
+                      <div class="reward-furniture-card">
+                        <div class="reward-furniture-icon"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reward-placement-highlight"></div>
+                  <div class="reward-drag-furniture"></div>
+                  <div class="reward-cursor"></div>
+                  <div class="reward-passive-badge"><span></span>白名單活動</div>
+                  <div class="reward-time-ring"><span>25</span></div>
+                  <div class="reward-coin-counter">+8</div>
+                  <span class="coin-float coin-a">🪙</span>
+                  <span class="coin-float coin-b">🪙</span>
+                  <span class="coin-float coin-c">🪙</span>
+                </div>
+              </div>
+              
+              <div class="simulator-controls">
+                <button class="simulator-btn btn-start" id="simulatorActionBtn">▶ 開始專注</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Side Panel (Sleek Glass Dashboard cards) -->
+        <div class="features-dashboard">
+          <button class="dash-card demo-trigger" type="button" data-demo="mode">
+            <span class="dash-icon">💻</span>
+            <div>
+              <h3>雙型態操作模式</h3>
+              <p>選單列模式固定尺寸，適合背景掛機；完整視窗可自由縮放、添置精美家具。</p>
+            </div>
+          </button>
+          <button class="dash-card demo-trigger" type="button" data-demo="whitelist">
+            <span class="dash-icon">🛡️</span>
+            <div>
+              <h3>主動專注與白名單</h3>
+              <p>番茄鐘工作期間，限用白名單 App，不慎分心會啟動寬限倒數以防摸魚。</p>
+            </div>
+          </button>
+          <button class="dash-card demo-trigger" type="button" data-demo="reward">
+            <span class="dash-icon">🪙</span>
+            <div>
+              <h3>擺設房間與被動收益</h3>
+              <p>在白名單 App 工作時累積被動金幣！可在商店添購書桌、唱機或遊樂設施。</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3F Section: Companions Room (16 Pets Gallery & Live wandering area) -->
+    <section id="floor-3" class="floor-section">
+      <!-- Live Room Floor for Multiple Pets to wander -->
+      <div class="room-floor-canvas" id="companionsRoom">
+        <div class="room-wallpaper companions-wall"></div>
+        <div class="room-floor companions-floor-tiles"></div>
+        <!-- Loft furniture decors -->
+        <div class="decor-bed"></div>
+        <div class="decor-arcade"></div>
+      </div>
+
+      <div class="floor-content companions-floor-content">
+        <div class="companions-panel">
+          <div class="companions-intro">
+            <h2>小夥伴圖鑑</h2>
+            <p>每隻小夥伴都具備獨立心情與獨特技能。點選卡片可同步召喚至 2F 的專注模擬房中！</p>
+          </div>
+
+          <div class="filter-bar-layout">
+            <div class="search-box-premium">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="searchInput" placeholder="搜尋小夥伴名稱...">
+            </div>
+            
+            <div class="filter-tags-premium">
+              <button class="filter-tag active" data-filter="all">全部</button>
+              <button class="filter-tag" data-filter="cat">貓咪 🐱</button>
+              <button class="filter-tag" data-filter="home">家寵 🐶</button>
+              <button class="filter-tag" data-filter="forest">森林 🦊</button>
+              <button class="filter-tag" data-filter="savanna">草原 🦁</button>
+              <button class="filter-tag" data-filter="cold">寒地 🐧</button>
+            </div>
+          </div>
+
+          <!-- Cards Scrollable Wrapper -->
+          <div class="companions-scroll-container">
+            <div class="companions-grid-layout" id="companionsGrid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Center -->
+    <section id="support-center" class="floor-section support-section">
+      <div class="floor-content support-floor-content">
+        <div class="support-panel">
+          <div class="support-intro">
+            <span class="support-kicker">Support Center</span>
+            <h2>客服中心</h2>
+            <p>遇到使用問題、購買疑問，或想回報 Zroom 的體驗建議，都可以從這裡開始。</p>
+          </div>
+
+          <div class="support-grid">
+            <article class="support-card contact-card">
+              <span class="support-card-icon">✉</span>
+              <h3>聯絡我們</h3>
+              <p>請附上 macOS 版本、Zroom 版本，以及問題畫面，會更快協助排查。</p>
+              <a href="mailto:support@zroomfocus.com">support@zroomfocus.com</a>
+            </article>
+
+            <article class="support-card">
+              <h3>常見問題</h3>
+              <div class="faq-list">
+                <details open>
+                  <summary>如何開啟白名單專注？</summary>
+                  <p>在 App 內設定白名單 App，開始專注後 Zroom 會協助你留在允許的工作環境中。</p>
+                </details>
+                <details>
+                  <summary>為什麼被動收益沒有增加？</summary>
+                  <p>請確認專注 session 正在進行，且目前使用中的 App 屬於白名單活動。</p>
+                </details>
+                <details>
+                  <summary>購買或解鎖內容沒有出現怎麼辦？</summary>
+                  <p>請先確認 App Store 帳號與網路狀態，再重新開啟 Zroom；仍有問題可來信協助處理。</p>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/zroom_logo_full.png" alt="Zroom Logo" class="footer-logo-img">
+      </div>
+      <p class="footer-desc">&copy; 2026 Zroom. 讓專注變得溫馨而有趣。</p>
+      <ul class="footer-links">
+        <li><a href="#support-center">客服中心</a></li>
+        <li><a href="mailto:support@zroomfocus.com">聯絡我們</a></li>
+        <li><a href="#" class="privacy-trigger">隱私權政策</a></li>
+        <li><a href="#" class="terms-trigger">服務條款</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Modal for Legal Docs -->
+  <div class="modal" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">條款內容</h3>
+        <button class="modal-close" id="modalClose" aria-label="關閉視窗">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Element -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- Scripts -->
+  <script src="app.js?v=20260614-zroomfocus-launch"></script>
+</body>
+</html>
