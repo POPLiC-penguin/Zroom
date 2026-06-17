@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="https://zroomfocus.com/assets/screenshots/lobby_full.png">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=20260612-zroom-tagline">
+  <link rel="stylesheet" href="style.css?v=20260617-public-study">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/app-icon.png">
@@ -245,12 +245,58 @@
                   <div class="reward-placement-highlight"></div>
                   <div class="reward-drag-furniture"></div>
                   <div class="reward-cursor"></div>
-                  <div class="reward-passive-badge"><span></span>白名單活動</div>
+                  <div class="reward-passive-badge"><span></span>任務完成</div>
                   <div class="reward-time-ring"><span>25</span></div>
                   <div class="reward-coin-counter">+8</div>
                   <span class="coin-float coin-a">🪙</span>
                   <span class="coin-float coin-b">🪙</span>
                   <span class="coin-float coin-c">🪙</span>
+                </div>
+                <div class="demo-layer studyroom-demo" aria-hidden="true">
+                  <div class="studyroom-window">
+                    <div class="studyroom-window-bar">
+                      <span></span><span></span><span></span>
+                      <strong>公共自習室</strong>
+                    </div>
+                    <div class="studyroom-wall">
+                      <div class="studyroom-bookcase"></div>
+                      <div class="studyroom-clock"></div>
+                      <div class="studyroom-plant"></div>
+                    </div>
+                    <div class="studyroom-floor">
+                      <div class="study-seat seat-a">
+                        <span class="study-chair"></span>
+                        <span class="study-table"></span>
+                        <span class="study-lamp"></span>
+                        <img src="assets/avatars/orange_tabby.png" class="study-pet study-main-pet" id="studyroomDemoPet" alt="">
+                        <em>你</em>
+                      </div>
+                      <div class="study-seat seat-b">
+                        <span class="study-chair"></span>
+                        <span class="study-table"></span>
+                        <span class="study-lamp"></span>
+                        <img src="assets/avatars/penguin.png" class="study-pet" alt="">
+                        <em>同樓層</em>
+                      </div>
+                      <div class="study-seat seat-c">
+                        <span class="study-chair"></span>
+                        <span class="study-table"></span>
+                        <span class="study-lamp"></span>
+                        <img src="assets/avatars/fox.png" class="study-pet" alt="">
+                        <em>專注中</em>
+                      </div>
+                      <div class="study-seat seat-d">
+                        <span class="study-chair"></span>
+                        <span class="study-table"></span>
+                        <span class="study-lamp"></span>
+                        <img src="assets/avatars/rabbit.png" class="study-pet" alt="">
+                        <em>休息中</em>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="studyroom-elevator-badge">2F</div>
+                  <div class="studyroom-sync-line"></div>
+                  <div class="studyroom-presence-chip"><span></span>4 人在線</div>
                 </div>
               </div>
               
@@ -280,8 +326,15 @@
           <button class="dash-card demo-trigger" type="button" data-demo="reward">
             <span class="dash-icon">🪙</span>
             <div>
-              <h3>擺設房間與被動收益</h3>
-              <p>在白名單 App 工作時累積被動金幣！可在商店添購書桌、唱機或遊樂設施。</p>
+              <h3>專注獎勵與房間佈置</h3>
+              <p>完成專注、每日任務與簽到後獲得金幣，添購書桌、唱機或遊樂設施打造自己的樓層。</p>
+            </div>
+          </button>
+          <button class="dash-card demo-trigger" type="button" data-demo="studyroom">
+            <span class="dash-icon">🏢</span>
+            <div>
+              <h3>公共自習室</h3>
+              <p>離開自己的房間，進入共享大樓同樓層自習；看見其他玩家的小夥伴一起坐下專注。</p>
             </div>
           </button>
         </div>
@@ -303,7 +356,7 @@
         <div class="companions-panel">
           <div class="companions-intro">
             <h2>小夥伴圖鑑</h2>
-            <p>每隻小夥伴都具備獨立心情與獨特技能。點選卡片可同步召喚至 2F 的專注模擬房中！</p>
+            <p>解鎖不同小夥伴，照顧牠們的心情、技能與召回狀態。點選卡片即可把目前夥伴召喚到 2F 模擬房預覽。</p>
           </div>
 
           <div class="filter-bar-layout">
@@ -361,8 +414,8 @@
                   <p>在 App 內設定白名單 App，開始專注後 Zroom 會協助你留在允許的工作環境中。</p>
                 </details>
                 <details>
-                  <summary>為什麼被動收益沒有增加？</summary>
-                  <p>請確認專注 session 正在進行，且目前使用中的 App 屬於白名單活動。</p>
+                  <summary>為什麼金幣獎勵沒有增加？</summary>
+                  <p>請確認專注已完成、每日任務或簽到已達成；若使用帳號同步，請保持網路連線以便結算進度。</p>
                 </details>
                 <details>
                   <summary>購買或解鎖內容沒有出現怎麼辦？</summary>
@@ -410,6 +463,6 @@
   <div class="custom-cursor" id="customCursor"></div>
 
   <!-- Scripts -->
-  <script src="app.js?v=20260614-zroomfocus-launch"></script>
+  <script src="app.js?v=20260617-public-study"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ const companionsData = [
     emoji: "🐱",
     cost: "免費預設",
     category: ["cat", "home"],
-    skill: "被動工作收益累積時間縮短 15% (加速金幣獲取)。"
+    skill: "入門陪伴型小夥伴，適合建立第一個白名單專注節奏。"
   },
   {
     id: "tuxedo",
@@ -42,7 +42,7 @@ const companionsData = [
     emoji: "🐰",
     cost: "3,000 🪙",
     category: ["home", "forest"],
-    skill: "被動 AFK 閒置判定時間延長至 300 秒，更不容易判定為斷線。"
+    skill: "離開工作視窗時擁有更長寬限，適合需要查資料與短暫切換的人。"
   },
   {
     id: "bear",
@@ -354,6 +354,7 @@ function initZroomWebsite() {
   const petNameBadge = document.getElementById("petNameBadge");
   const whitelistDemoPet = document.getElementById("whitelistDemoPet");
   const rewardDemoPet = document.getElementById("rewardDemoPet");
+  const studyroomDemoPet = document.getElementById("studyroomDemoPet");
   const demoTriggers = document.querySelectorAll(".demo-trigger");
 
   let activeFilter = "all";
@@ -593,6 +594,10 @@ function initZroomWebsite() {
           rewardDemoPet.src = petOverlay.src;
           rewardDemoPet.alt = pet.name;
         }
+        if (studyroomDemoPet) {
+          studyroomDemoPet.src = petOverlay.src;
+          studyroomDemoPet.alt = pet.name;
+        }
         
         // Scroll to 2F Focus room automatically to preview pet
         const focusFloor = document.getElementById("floor-2");
@@ -669,16 +674,16 @@ function initZroomWebsite() {
   function clearFeatureDemo() {
     clearTimeout(demoResetTimer);
     demoResetTimer = null;
-    simulatorRoom.classList.remove("demo-mode", "demo-whitelist", "demo-reward");
+    simulatorRoom.classList.remove("demo-mode", "demo-whitelist", "demo-reward", "demo-studyroom");
     demoTriggers.forEach(trigger => trigger.classList.remove("active"));
   }
 
   function runFeatureDemo(demoName) {
-    if (!["mode", "whitelist", "reward"].includes(demoName)) return;
+    if (!["mode", "whitelist", "reward", "studyroom"].includes(demoName)) return;
 
     clearFeatureDemo();
 
-    if ((demoName === "whitelist" || demoName === "reward") && !isFocusing) {
+    if ((demoName === "whitelist" || demoName === "reward" || demoName === "studyroom") && !isFocusing) {
       startFocusSession();
     }
 
@@ -690,6 +695,11 @@ function initZroomWebsite() {
     if (demoName === "reward" && rewardDemoPet) {
       rewardDemoPet.src = petOverlay.src;
       rewardDemoPet.alt = petOverlay.alt;
+    }
+
+    if (demoName === "studyroom" && studyroomDemoPet) {
+      studyroomDemoPet.src = petOverlay.src;
+      studyroomDemoPet.alt = petOverlay.alt;
     }
 
     const activeTrigger = document.querySelector(`.demo-trigger[data-demo="${demoName}"]`);
@@ -704,7 +714,7 @@ function initZroomWebsite() {
       scrollToSection(focusFloor, "smooth");
     }
 
-    const demoDuration = demoName === "mode" ? 5400 : demoName === "whitelist" ? 4600 : demoName === "reward" ? 6000 : 2600;
+    const demoDuration = demoName === "mode" ? 5400 : demoName === "whitelist" ? 4600 : demoName === "reward" ? 6000 : demoName === "studyroom" ? 6600 : 2600;
 
     demoResetTimer = setTimeout(() => {
       simulatorRoom.classList.remove(`demo-${demoName}`);

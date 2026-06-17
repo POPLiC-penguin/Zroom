@@ -889,7 +889,7 @@ header {
 .features-dashboard {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .dash-card {
@@ -897,10 +897,10 @@ header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
-  border-radius: 24px;
-  padding: 1.75rem 2rem;
+  border-radius: 20px;
+  padding: 1.3rem 1.45rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.1rem;
   align-items: flex-start;
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, border-color 0.3s ease;
@@ -921,10 +921,10 @@ header {
 }
 
 .dash-icon {
-  font-size: 2rem;
+  font-size: 1.7rem;
   background: var(--primary-light);
-  width: 54px;
-  height: 54px;
+  width: 48px;
+  height: 48px;
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -933,13 +933,13 @@ header {
 }
 
 .dash-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.12rem;
+  margin-bottom: 0.35rem;
 }
 
 .dash-card p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   line-height: 1.5;
 }
 
@@ -2452,6 +2452,261 @@ footer {
   box-shadow: 0 10px 20px rgba(255, 142, 37, 0.34);
 }
 
+.studyroom-window {
+  left: 5%;
+  top: 8%;
+  width: 90%;
+  height: 72%;
+  border-radius: 13px;
+  overflow: hidden;
+  background: rgba(249, 244, 237, 0.98);
+  border: 2px solid rgba(255, 255, 255, 0.64);
+  box-shadow: 0 17px 34px rgba(0, 0, 0, 0.28);
+}
+
+.studyroom-window-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 14%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 12px;
+  background: rgba(45, 37, 31, 0.12);
+}
+
+.studyroom-window-bar span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.studyroom-window-bar strong {
+  margin-left: auto;
+  color: rgb(67, 50, 39);
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.studyroom-wall {
+  position: absolute;
+  left: 0;
+  top: 14%;
+  width: 100%;
+  height: 28%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 15px, rgb(209, 194, 173) 15px 16px),
+    linear-gradient(180deg, rgb(230, 216, 197), rgb(219, 203, 181));
+}
+
+.studyroom-floor {
+  position: absolute;
+  left: 0;
+  top: 42%;
+  width: 100%;
+  height: 58%;
+  background:
+    linear-gradient(rgba(180, 180, 188, 0.72) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(180, 180, 188, 0.72) 2px, transparent 2px),
+    linear-gradient(180deg, rgb(239, 240, 244), rgb(222, 224, 231));
+  background-size: 25% 33.333%, 25% 33.333%, 100% 100%;
+}
+
+.studyroom-bookcase {
+  position: absolute;
+  left: 10%;
+  bottom: 12%;
+  width: 25%;
+  height: 50%;
+  border-radius: 4px;
+  background:
+    linear-gradient(90deg, #20b26f 0 11%, transparent 11% 17%, #f05a4f 17% 28%, transparent 28% 35%, #ffd83d 35% 46%, transparent 46% 55%, #20b26f 55% 67%, transparent 67% 73%, #f05a4f 73% 84%, transparent 84%) 14% 20% / 72% 46% no-repeat,
+    linear-gradient(#7a4b2d, #7a4b2d) 0 0 / 100% 100% no-repeat;
+  box-shadow: inset 0 -8px 0 rgba(62, 35, 20, 0.36);
+}
+
+.studyroom-clock {
+  position: absolute;
+  left: 47%;
+  top: 19%;
+  width: 9%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(68, 51, 38, 0.78) 48% 53%, transparent 53%),
+    linear-gradient(0deg, transparent 49%, rgba(68, 51, 38, 0.72) 49% 54%, transparent 54%),
+    #ffe07d;
+  border: 2px solid rgba(91, 67, 45, 0.6);
+}
+
+.studyroom-plant {
+  position: absolute;
+  right: 11%;
+  bottom: 10%;
+  width: 8%;
+  height: 46%;
+  background:
+    radial-gradient(circle at 28% 22%, #24a56a 0 18%, transparent 19%),
+    radial-gradient(circle at 61% 18%, #12864f 0 18%, transparent 19%),
+    radial-gradient(circle at 51% 40%, #20b26f 0 22%, transparent 23%),
+    linear-gradient(#985733, #985733) 44% 50% / 14% 38% no-repeat,
+    linear-gradient(#d46e43, #d46e43) 31% 84% / 42% 16% no-repeat;
+}
+
+.study-seat {
+  position: absolute;
+  width: 22%;
+  height: 34%;
+  transform: translate(-50%, -50%);
+}
+
+.seat-a { left: 27%; top: 38%; }
+.seat-b { left: 73%; top: 38%; }
+.seat-c { left: 27%; top: 76%; }
+.seat-d { left: 73%; top: 76%; }
+
+.study-chair,
+.study-table,
+.study-lamp {
+  position: absolute;
+  display: block;
+}
+
+.study-chair {
+  left: 33%;
+  top: -3%;
+  width: 34%;
+  height: 35%;
+  background:
+    linear-gradient(90deg, transparent 0 18%, #6f452c 18% 28%, transparent 28% 70%, #6f452c 70% 80%, transparent 80%),
+    linear-gradient(#865534, #865534) 0 58% / 100% 32% no-repeat,
+    linear-gradient(#6f452c, #6f452c) 0 6% / 100% 13% no-repeat;
+}
+
+.study-table {
+  left: 4%;
+  top: 29%;
+  width: 92%;
+  height: 40%;
+  background:
+    linear-gradient(90deg, #57321f 0 8%, transparent 8% 92%, #57321f 92%),
+    linear-gradient(#744224, #744224) 0 0 / 100% 70% no-repeat;
+  box-shadow: 0 8px 0 rgba(64, 36, 22, 0.55);
+}
+
+.study-lamp {
+  right: 17%;
+  top: 33%;
+  width: 16%;
+  height: 28%;
+  background:
+    radial-gradient(circle at 50% 9%, #ffe15e 0 30%, transparent 31%),
+    linear-gradient(#44505c, #44505c) 48% 32% / 14% 44% no-repeat,
+    linear-gradient(#44505c, #44505c) 25% 84% / 50% 8% no-repeat;
+}
+
+.study-lamp::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  width: 62px;
+  height: 62px;
+  transform: translate(-50%, -16%);
+  border-radius: 50%;
+  background: rgba(255, 220, 86, 0.26);
+  opacity: 0;
+}
+
+.study-pet {
+  position: absolute;
+  left: 35%;
+  top: 22%;
+  width: 34%;
+  transform: translate(-50%, -50%);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.2));
+  z-index: 5;
+  opacity: 0;
+}
+
+.seat-b .study-pet,
+.seat-d .study-pet {
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.study-seat em {
+  position: absolute;
+  left: 50%;
+  top: -23%;
+  min-width: 58px;
+  padding: 3px 7px;
+  border-radius: 7px;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+  background: rgba(34, 28, 24, 0.84);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+}
+
+.studyroom-elevator-badge {
+  left: 9%;
+  top: 15%;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff8e25, #f05a4f);
+  box-shadow: 0 12px 24px rgba(255, 142, 37, 0.32);
+}
+
+.studyroom-sync-line {
+  left: 18%;
+  top: 42%;
+  width: 64%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(39, 201, 63, 0.92), transparent);
+  box-shadow: 0 0 18px rgba(39, 201, 63, 0.46);
+}
+
+.studyroom-presence-chip {
+  right: 10%;
+  top: 16%;
+  min-width: 96px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 900;
+  background: rgba(34, 28, 24, 0.9);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.26);
+}
+
+.studyroom-presence-chip span {
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #27c93f;
+  box-shadow: 0 0 0 5px rgba(39, 201, 63, 0.18);
+}
+
 .simulator-room.demo-mode .demo-full-window {
   animation: demo-window-fold 5.2s ease both;
 }
@@ -2606,6 +2861,93 @@ footer {
 
 .simulator-room.demo-reward .coin-c {
   animation: coin-rise-c 5.8s ease both;
+}
+
+.simulator-room.demo-studyroom .focus-room-stage {
+  filter: saturate(0.9) brightness(0.88);
+  transform: scale(0.985);
+}
+
+.simulator-room.demo-studyroom .studyroom-window {
+  animation: studyroom-window-rise 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .studyroom-elevator-badge {
+  animation: studyroom-elevator-pop 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .studyroom-sync-line {
+  animation: studyroom-sync-line 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .studyroom-presence-chip {
+  animation: studyroom-presence-chip 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .study-seat {
+  animation: study-seat-settle 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .seat-b {
+  animation-delay: 0.18s;
+}
+
+.simulator-room.demo-studyroom .seat-c {
+  animation-delay: 0.34s;
+}
+
+.simulator-room.demo-studyroom .seat-d {
+  animation-delay: 0.5s;
+}
+
+.simulator-room.demo-studyroom .study-pet {
+  animation: study-pet-arrive 6.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.simulator-room.demo-studyroom .seat-b .study-pet {
+  animation-name: study-pet-arrive-left;
+  animation-delay: 0.22s;
+}
+
+.simulator-room.demo-studyroom .seat-c .study-pet {
+  animation-delay: 0.4s;
+}
+
+.simulator-room.demo-studyroom .seat-d .study-pet {
+  animation-name: study-pet-arrive-left;
+  animation-delay: 0.58s;
+}
+
+.simulator-room.demo-studyroom .study-seat em {
+  animation: study-seat-label 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .seat-b em {
+  animation-delay: 0.22s;
+}
+
+.simulator-room.demo-studyroom .seat-c em {
+  animation-delay: 0.4s;
+}
+
+.simulator-room.demo-studyroom .seat-d em {
+  animation-delay: 0.58s;
+}
+
+.simulator-room.demo-studyroom .study-lamp::after {
+  animation: study-lamp-glow 6.4s ease both;
+}
+
+.simulator-room.demo-studyroom .seat-b .study-lamp::after {
+  animation-delay: 0.22s;
+}
+
+.simulator-room.demo-studyroom .seat-c .study-lamp::after {
+  animation-delay: 0.4s;
+}
+
+.simulator-room.demo-studyroom .seat-d .study-lamp::after {
+  animation-delay: 0.58s;
 }
 
 .focus-furniture {
@@ -3399,6 +3741,62 @@ footer {
   100% { opacity: 0; transform: translateY(-52px) scale(0.88); }
 }
 
+@keyframes studyroom-window-rise {
+  0% { opacity: 0; transform: translateY(14px) scale(0.94); }
+  9%, 90% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(5px) scale(0.98); }
+}
+
+@keyframes studyroom-elevator-pop {
+  0%, 8% { opacity: 0; transform: translateY(-12px) scale(0.78); }
+  16%, 34% { opacity: 1; transform: translateY(0) scale(1); }
+  46%, 100% { opacity: 0; transform: translateY(-5px) scale(0.92); }
+}
+
+@keyframes studyroom-sync-line {
+  0%, 22% { opacity: 0; transform: scaleX(0.18); }
+  32%, 48% { opacity: 1; transform: scaleX(1); }
+  62%, 100% { opacity: 0; transform: scaleX(0.86); }
+}
+
+@keyframes studyroom-presence-chip {
+  0%, 46% { opacity: 0; transform: translateY(8px) scale(0.86); }
+  56%, 88% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-4px) scale(0.94); }
+}
+
+@keyframes study-seat-settle {
+  0%, 18% { opacity: 0; filter: brightness(0.95); }
+  28%, 90% { opacity: 1; filter: brightness(1); }
+  100% { opacity: 0; filter: brightness(1); }
+}
+
+@keyframes study-pet-arrive {
+  0%, 24% { opacity: 0; transform: translate(-102%, -50%) scale(0.86); }
+  38% { opacity: 1; transform: translate(-50%, -50%) scale(1.06, 0.94); }
+  48%, 88% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -54%) scale(0.96); }
+}
+
+@keyframes study-pet-arrive-left {
+  0%, 24% { opacity: 0; transform: translate(12%, -50%) scaleX(-1) scale(0.86); }
+  38% { opacity: 1; transform: translate(-50%, -50%) scaleX(-1) scale(1.06, 0.94); }
+  48%, 88% { opacity: 1; transform: translate(-50%, -50%) scaleX(-1) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -54%) scaleX(-1) scale(0.96); }
+}
+
+@keyframes study-seat-label {
+  0%, 35% { opacity: 0; transform: translate(-50%, 6px) scale(0.86); }
+  45%, 82% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -5px) scale(0.94); }
+}
+
+@keyframes study-lamp-glow {
+  0%, 42% { opacity: 0; transform: translate(-50%, -16%) scale(0.72); }
+  53%, 88% { opacity: 1; transform: translate(-50%, -16%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -16%) scale(0.96); }
+}
+
 @keyframes pet-breath {
   0%, 100% { transform: translate(-50%, -50%) scale(1); }
   50% { transform: translate(-50%, -50%) scale(1.04, 0.96); }
@@ -3433,6 +3831,7 @@ footer {
     gap: 2rem;
     overflow: visible;
     padding-top: 80px;
+    padding-bottom: 8rem;
     align-items: flex-start;
   }
   
